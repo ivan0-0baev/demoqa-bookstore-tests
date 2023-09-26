@@ -1,0 +1,129 @@
+2023-09-26 13:44:06 INFO SetUpClass: 
+username:    validUser 
+password:    Password123! 
+
+2023-09-26 13:44:06 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:06 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 83
+2023-09-26 13:44:06 INFO Valid User was registered 
+userId:      98445923-d397-47bc-a50d-b3ce686a0b86
+2023-09-26 13:44:06 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:07 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 280
+2023-09-26 13:44:07 INFO Generate Token! 
+token:    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InZhbGlkVXNlciIsInBhc3N3b3JkIjoiUGFzc3dvcmQxMjMhIiwiaWF0IjoxNjk1NzI1MDQ3fQ.l_RwhTbXlH1Yhc4im9hghB-F_8aQiiEatwko1yYMcMQ
+2023-09-26 13:44:07 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:07 DEBUG https://demoqa.com:443 "GET /BookStore/v1/Books HTTP/1.1" 200 4514
+2023-09-26 13:44:07 INFO Initializing book list and chosen isbns
+2023-09-26 13:44:07 INFO 
+
+2023-09-26 13:44:07 INFO Starting test - adding book to collection
+2023-09-26 13:44:07 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:07 DEBUG https://demoqa.com:443 "POST /BookStore/v1/Books HTTP/1.1" 201 36
+2023-09-26 13:44:07 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:07 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 632
+2023-09-26 13:44:07 INFO Successfully added book with valid ISBN to collection!
+
+2023-09-26 13:44:07 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:08 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 632
+2023-09-26 13:44:08 INFO 
+username:    validUser
+books:       ['9781449325862']
+
+2023-09-26 13:44:08 INFO Starting test - try to add a non-existing book to collection
+2023-09-26 13:44:08 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:08 DEBUG https://demoqa.com:443 "POST /BookStore/v1/Books HTTP/1.1" 400 79
+2023-09-26 13:44:08 INFO Success, Invalid ISBN was not accepted!
+
+2023-09-26 13:44:08 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:08 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 632
+2023-09-26 13:44:08 INFO 
+username:    validUser
+books:       ['9781449325862']
+
+2023-09-26 13:44:08 INFO Starting test - add random book to collection
+2023-09-26 13:44:08 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:08 DEBUG https://demoqa.com:443 "POST /BookStore/v1/Books HTTP/1.1" 201 61
+2023-09-26 13:44:08 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:09 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1766
+2023-09-26 13:44:09 INFO Successfully added book with valid ISBN to collection!
+
+2023-09-26 13:44:09 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:10 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1766
+2023-09-26 13:44:10 INFO 
+username:    validUser
+books:       ['9781449325862', '9781449331818', '9781491904244']
+
+2023-09-26 13:44:10 INFO Starting test - check if book with isbn: 9781491904244 has 278 pages
+2023-09-26 13:44:10 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:10 DEBUG https://demoqa.com:443 "GET /BookStore/v1/Book?ISBN=9781491904244 HTTP/1.1" 200 549
+2023-09-26 13:44:10 INFO Success, Book with isbn: 9781491904244, has 278 pages!
+2023-09-26 13:44:10 INFO 
+
+2023-09-26 13:44:10 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:10 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1766
+2023-09-26 13:44:10 INFO 
+username:    validUser
+books:       ['9781449325862', '9781449331818', '9781491904244']
+
+2023-09-26 13:44:10 INFO Starting test - remove book from collection
+2023-09-26 13:44:10 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:11 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1766
+2023-09-26 13:44:11 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:11 DEBUG https://demoqa.com:443 "DELETE /BookStore/v1/Book HTTP/1.1" 204 0
+2023-09-26 13:44:11 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:11 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1216
+2023-09-26 13:44:11 INFO Book with isbn: 9781491904244 was removed from collection
+2023-09-26 13:44:11 INFO 
+
+2023-09-26 13:44:11 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:12 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1216
+2023-09-26 13:44:12 INFO 
+username:    validUser
+books:       ['9781449325862', '9781449331818']
+
+2023-09-26 13:44:12 INFO Starting test - try to remove a book not in collection
+2023-09-26 13:44:12 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:12 DEBUG https://demoqa.com:443 "DELETE /BookStore/v1/Book HTTP/1.1" 400 80
+2023-09-26 13:44:12 INFO Success, Book with isbn: 9781491950296 not in collection
+2023-09-26 13:44:12 INFO 
+
+2023-09-26 13:44:12 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:12 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1216
+2023-09-26 13:44:12 INFO 
+username:    validUser
+books:       ['9781449325862', '9781449331818']
+
+2023-09-26 13:44:12 INFO Starting test - switching the first book in collection with another one from the store
+2023-09-26 13:44:12 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:12 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1216
+2023-09-26 13:44:12 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:13 DEBUG https://demoqa.com:443 "PUT /BookStore/v1/Books/9781449325862 HTTP/1.1" 200 1214
+2023-09-26 13:44:13 INFO Book with isbn: 9781449325862 successfully replaced by book with isbn: 9781593275846
+2023-09-26 13:44:13 INFO 
+
+2023-09-26 13:44:13 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:13 DEBUG https://demoqa.com:443 "GET /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 200 1214
+2023-09-26 13:44:13 INFO 
+username:    validUser
+books:       ['9781593275846', '9781449331818']
+
+2023-09-26 13:44:13 INFO Starting test - check if user was authorized
+2023-09-26 13:44:13 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:14 DEBUG https://demoqa.com:443 "POST /Account/v1/Authorized HTTP/1.1" 200 4
+2023-09-26 13:44:14 INFO Success, user is authorized!
+2023-09-26 13:44:14 INFO 
+
+2023-09-26 13:44:14 INFO Starting test - check if user is registered
+2023-09-26 13:44:14 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:14 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 406 40
+2023-09-26 13:44:14 INFO Success, User exists!
+2023-09-26 13:44:14 INFO 
+
+2023-09-26 13:44:14 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:15 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 280
+2023-09-26 13:44:15 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:44:15 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/98445923-d397-47bc-a50d-b3ce686a0b86 HTTP/1.1" 204 0
+2023-09-26 13:44:15 INFO TearDownClass: 204 Deleted user with: 
+username     validUser 
+password     Password123! 
+userId:      98445923-d397-47bc-a50d-b3ce686a0b86 
+

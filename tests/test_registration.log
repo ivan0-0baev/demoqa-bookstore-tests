@@ -1,0 +1,314 @@
+2023-09-26 13:42:39 INFO Starting test registration with valid credentials
+2023-09-26 13:42:39 INFO Testing with:
+username:     validUser 
+password:     Password123! 
+
+2023-09-26 13:42:39 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:40 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 83
+2023-09-26 13:42:40 INFO Valid User was registered
+2023-09-26 13:42:40 INFO 
+
+2023-09-26 13:42:40 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:40 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 406 40
+2023-09-26 13:42:40 INFO Success in test with newly created valid existing credentials: username = 'validUser', password = 'Number123!'. User exists!
+2023-09-26 13:42:40 INFO 
+
+2023-09-26 13:42:40 INFO TearDown
+2023-09-26 13:42:40 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:40 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 280
+2023-09-26 13:42:40 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:41 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/89bdce0f-5065-4588-aec3-f6bffda39396 HTTP/1.1" 204 0
+2023-09-26 13:42:41 INFO Response: 204 
+Deleted user with: 
+username     validUser 
+password     Password123! 
+userId:      89bdce0f-5065-4588-aec3-f6bffda39396 
+
+2023-09-26 13:42:41 INFO Starting test registration with empty username and valid password
+2023-09-26 13:42:41 INFO Testing with:
+username:      
+password:     Password123! 
+
+2023-09-26 13:42:41 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:41 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 59
+2023-09-26 13:42:41 INFO Test successful. User was Not registered. Username is empty
+2023-09-26 13:42:41 INFO 
+
+2023-09-26 13:42:41 INFO TearDown
+2023-09-26 13:42:41 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:41 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 400 59
+2023-09-26 13:42:41 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:41 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:42:41 INFO No need to delete an account 
+
+2023-09-26 13:42:41 INFO Starting test registration with empty username and password
+2023-09-26 13:42:41 INFO Testing with:
+username:      
+password:      
+
+2023-09-26 13:42:41 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:41 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 59
+2023-09-26 13:42:41 INFO Test successful. User was Not registered. Username and Password are empty
+2023-09-26 13:42:41 INFO 
+
+2023-09-26 13:42:41 INFO TearDown
+2023-09-26 13:42:41 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:42 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 400 59
+2023-09-26 13:42:42 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:42 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:42:42 INFO No need to delete an account 
+
+2023-09-26 13:42:42 INFO Starting test registration with existing username
+2023-09-26 13:42:42 INFO Testing with:
+username:     existingUser 
+password:     ExistingUser123! 
+
+2023-09-26 13:42:42 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:42 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 86
+2023-09-26 13:42:42 INFO Success, repeat usernames are not restricted!
+2023-09-26 13:42:42 INFO 
+
+2023-09-26 13:42:42 INFO TearDown
+2023-09-26 13:42:42 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:43 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 289
+2023-09-26 13:42:43 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:43 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/64aa5ebd-2c8f-4711-8773-2fb8313ab76b HTTP/1.1" 204 0
+2023-09-26 13:42:43 INFO Response: 204 
+Deleted user with: 
+username     existingUser 
+password     ExistingUser123! 
+userId:      64aa5ebd-2c8f-4711-8773-2fb8313ab76b 
+
+2023-09-26 13:42:43 INFO Starting test registration with password with mixed alphabet
+2023-09-26 13:42:43 INFO Testing with:
+username:     validUsername 
+password:     PasswordПарола123! 
+
+2023-09-26 13:42:43 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:44 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 87
+2023-09-26 13:42:44 INFO Test successful. Password with mixed alphabets that conforms to requirements accepted!
+2023-09-26 13:42:44 INFO 
+
+2023-09-26 13:42:44 INFO TearDown
+2023-09-26 13:42:44 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:44 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 301
+2023-09-26 13:42:44 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:45 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/bad82feb-8af8-4a47-b5d8-e4e69bd47461 HTTP/1.1" 204 0
+2023-09-26 13:42:45 INFO Response: 204 
+Deleted user with: 
+username     validUsername 
+password     PasswordПарола123! 
+userId:      bad82feb-8af8-4a47-b5d8-e4e69bd47461 
+
+2023-09-26 13:42:45 INFO Starting test registration with username with mixed alphabets
+2023-09-26 13:42:45 INFO Testing with:
+username:     валидноUsername 
+password:     Password123! 
+
+2023-09-26 13:42:45 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:45 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 96
+2023-09-26 13:42:45 INFO Username in another alphabet is accepted!
+2023-09-26 13:42:45 INFO 
+
+2023-09-26 13:42:45 INFO TearDown
+2023-09-26 13:42:45 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:46 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 297
+2023-09-26 13:42:46 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:46 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/495070a6-8494-4534-9c20-3d55b8063fc3 HTTP/1.1" 204 0
+2023-09-26 13:42:46 INFO Response: 204 
+Deleted user with: 
+username     валидноUsername 
+password     Password123! 
+userId:      495070a6-8494-4534-9c20-3d55b8063fc3 
+
+2023-09-26 13:42:46 INFO Starting test registration with password entirely in cyrillic
+2023-09-26 13:42:46 INFO Testing with:
+username:     validUsername 
+password:     Парола123! 
+
+2023-09-26 13:42:46 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:46 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:42:46 INFO Test successful. User was Not registered. Password has no [a-z,A-Z] letters
+2023-09-26 13:42:46 INFO 
+
+2023-09-26 13:42:46 INFO TearDown
+2023-09-26 13:42:46 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:47 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:42:47 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:47 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:42:47 INFO No need to delete an account 
+
+2023-09-26 13:42:47 INFO Starting test registration with username entirely in cyrillic
+2023-09-26 13:42:47 INFO Testing with:
+username:     валидноИме 
+password:     Password123! 
+
+2023-09-26 13:42:47 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:47 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 201 94
+2023-09-26 13:42:47 INFO Username in another alphabet is accepted!
+2023-09-26 13:42:47 INFO 
+
+2023-09-26 13:42:47 INFO TearDown
+2023-09-26 13:42:47 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:48 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 294
+2023-09-26 13:42:48 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:48 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ebecc982-f607-4bdf-b34b-39efc18f887e HTTP/1.1" 204 0
+2023-09-26 13:42:48 INFO Response: 204 
+Deleted user with: 
+username     валидноИме 
+password     Password123! 
+userId:      ebecc982-f607-4bdf-b34b-39efc18f887e 
+
+2023-09-26 13:42:48 INFO Starting test registration with empty password
+2023-09-26 13:42:48 INFO Testing with:
+username:     invalidNewUser 
+password:      
+
+2023-09-26 13:42:48 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:48 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 59
+2023-09-26 13:42:48 INFO Test successful. User was Not registered. Password is empty
+2023-09-26 13:42:48 INFO 
+
+2023-09-26 13:42:48 INFO TearDown
+2023-09-26 13:42:48 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:49 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 400 59
+2023-09-26 13:42:49 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:42:49 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:42:49 INFO No need to delete an account 
+
+2023-09-26 13:42:49 INFO Starting test registration with a long valid password
+2023-09-26 13:42:49 INFO Testing with:
+username:     invalidNewUser 
+password:     validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123!validPassword123! 
+
+2023-09-26 13:42:49 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:49 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 504 177
+2023-09-26 13:43:49 ERROR Error in testing registration with a long password!
+2023-09-26 13:43:49 ERROR 
+
+2023-09-26 13:43:49 INFO TearDown
+2023-09-26 13:43:49 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:49 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:49 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:50 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:50 INFO No need to delete an account 
+
+2023-09-26 13:43:50 INFO Starting test registration with Password without digits
+2023-09-26 13:43:50 INFO Testing with:
+username:     invalidNewUser 
+password:     Password! 
+
+2023-09-26 13:43:50 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:50 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:43:50 INFO Test successful. User was Not registered. Password has no digit!
+2023-09-26 13:43:50 INFO 
+
+2023-09-26 13:43:50 INFO TearDown
+2023-09-26 13:43:50 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:50 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:50 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:51 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:51 INFO No need to delete an account 
+
+2023-09-26 13:43:51 INFO Starting test registration with password without lowercase letters
+2023-09-26 13:43:51 INFO Testing with:
+username:     invalidNewUser 
+password:     PASSWORD123! 
+
+2023-09-26 13:43:51 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:51 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:43:51 INFO Test successful. User was Not registered. Password with no lowercase letters!
+2023-09-26 13:43:51 INFO 
+
+2023-09-26 13:43:51 INFO TearDown
+2023-09-26 13:43:51 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:51 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:51 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:52 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:52 INFO No need to delete an account 
+
+2023-09-26 13:43:52 INFO Starting test registration with password without special characters
+2023-09-26 13:43:52 INFO Testing with:
+username:     invalidNewUser 
+password:     Password123 
+
+2023-09-26 13:43:52 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:52 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:43:52 INFO Test successful. User was Not registered. Password with no special character!
+2023-09-26 13:43:52 INFO 
+
+2023-09-26 13:43:52 INFO TearDown
+2023-09-26 13:43:52 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:52 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:52 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:53 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:53 INFO No need to delete an account 
+
+2023-09-26 13:43:53 INFO Starting test registration with password without uppercase letters
+2023-09-26 13:43:53 INFO Testing with:
+username:     invalidNewUser 
+password:     password123! 
+
+2023-09-26 13:43:53 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:53 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:43:53 INFO Test successful. User was Not registered. Password with no uppercase letters!
+2023-09-26 13:43:53 INFO 
+
+2023-09-26 13:43:53 INFO TearDown
+2023-09-26 13:43:53 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:53 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:53 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:54 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:54 INFO No need to delete an account 
+
+2023-09-26 13:43:54 INFO Starting test registration with password with '()/+-*=_' as a special characters
+2023-09-26 13:43:54 INFO Testing with:
+username:     invalidNewUser 
+password:     Password123()/+-*=_ 
+
+2023-09-26 13:43:54 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:54 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 406 40
+2023-09-26 13:43:54 ERROR Error in testing registration with a password with '()/+-*=_' as a special character!
+2023-09-26 13:43:54 ERROR 
+
+2023-09-26 13:43:54 INFO TearDown
+2023-09-26 13:43:54 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:54 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 296
+2023-09-26 13:43:54 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:55 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:55 INFO No need to delete an account 
+
+2023-09-26 13:43:55 INFO Starting test registration with short password
+2023-09-26 13:43:55 INFO Testing with:
+username:     invalidNewUser 
+password:     Pass12! 
+
+2023-09-26 13:43:55 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:55 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 400 230
+2023-09-26 13:43:55 INFO Test successful. User was Not registered. Password is too short!
+2023-09-26 13:43:55 INFO 
+
+2023-09-26 13:43:55 INFO TearDown
+2023-09-26 13:43:55 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:55 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 200 85
+2023-09-26 13:43:55 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:55 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:55 INFO No need to delete an account 
+
+2023-09-26 13:43:55 INFO Starting test registration with existing credentials
+2023-09-26 13:43:55 INFO Testing with:
+username:      
+password:      
+
+2023-09-26 13:43:55 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:56 DEBUG https://demoqa.com:443 "POST /Account/v1/User HTTP/1.1" 406 40
+2023-09-26 13:43:56 INFO Success, couldn't register a new user with existing credentials!
+2023-09-26 13:43:56 INFO 
+
+2023-09-26 13:43:56 INFO TearDown
+2023-09-26 13:43:56 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:56 DEBUG https://demoqa.com:443 "POST /Account/v1/GenerateToken HTTP/1.1" 400 59
+2023-09-26 13:43:56 DEBUG Starting new HTTPS connection (1): demoqa.com:443
+2023-09-26 13:43:56 DEBUG https://demoqa.com:443 "DELETE /Account/v1/User/ HTTP/1.1" 404 None
+2023-09-26 13:43:56 INFO No need to delete an account 
+
